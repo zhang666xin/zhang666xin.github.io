@@ -164,9 +164,72 @@
 			<div class="am-article-bd">
 				<div class="content" id="post-content">
 					
-						<p>java 笔记现在开始。。。。。</p>
-<p>1 .。。。</p>
-<p>2 。。。</p>
+						<p>java笔记现在开始：（ ps:此java笔记从继承开始，之前的已记在纸上。）</p>
+<p><strong>一：继承</strong></p>
+<p>1 .super关键字 使用：在对象内部使用，可以代表父类对象。</p>
+<p>访问父类的属性：super.属性名</p>
+<p>访问父类的方法：super.方法名（）</p>
+<p>2.Object类：所有类的父类，若没使用extends关键字，则默认继承Object类，类中方法适合所有子类。</p>
+<p>（1）toString（）方法</p>
+<p>简便的重写toString方法：右键菜单的Source-&gt;选择Generate toString（）…</p>
+<p>（2）equals（）方法</p>
+<p>简便的重写equals（）方法：同上</p>
+<p>注：没有重写 toString 方法的情况下直接用 print 打印对象，输出的是此对象的地址。默认继承 Object 的 toString( ) 方法，输出对象地址 。</p>
+<p>3.类的对象与类对象区别：</p>
+<p>类对象侧重于类的属性，如姓名，年龄；</p>
+<p>类的对象侧重于属性值，如张三，20；</p>
+<p><strong>二：多态</strong></p>
+<p>1.定义：对象的多种形态。     注： 继承是多态的实现基础     </p>
+<p>（1）引用多态：父类的引用可以指向本类的对象。</p>
+<p>​                            父类的引用可以指向子类的对象。</p>
+<p>​               eg：fulei obj1=new fulei（）；</p>
+<p>​                       fulei obj2=new  zilei（）；</p>
+<p>​                       而 zilei  obj3=new fulei（）； 错误，子类的引用不能指向父类</p>
+<p>（2）方法多态：创建本类对象时，调用的方法为本类方法。</p>
+<p>​                             创建子类对象时，调用的方法为子类重写的方法或者继承的方法。</p>
+<p>练习题：</p>
+<p>创建同时显示大巴在陆地上载客40人，轮船在海洋上载客200人，飞机在空中载客500人？？？</p>
+<p>参考答案如下：</p>
+<p>[<a href="https://www.imooc.com/qadetail/288649]" target="_blank" rel="noopener">https://www.imooc.com/qadetail/288649]</a>: </p>
+<p>2.引用类型转换：</p>
+<p>（1）向上类型转换（隐式/自动类型转换),是小类型到大类型的转换。                  </p>
+<p>（2）向下类型转换（强制类型转换），是大类型到小类型的转换。</p>
+<p> eg：  Dog dog=new Dog()</p>
+<p>Animal animal=dog；  而  Dog dog2=animal; 有风险；Dog dog2=(Dog)animal; 进行强制类型转换。但是Cat  cat=(Cat)animal;错误，类型不一样，此类型为Dog类型。解决：instanceof运算符避免类型转换的安全性问题。 </p>
+<p>用法：</p>
+<p>　　boolean result = object instanceof class</p>
+<p>参数：</p>
+<p>　　result ：boolean类型。</p>
+<p>　　object ：必选项。任意对象表达式。</p>
+<p>　　class：必选项。任意已定义的对象类。</p>
+<p>说明：</p>
+<p>　　如果该object 是该class的一个实例，那么返回true。如果该object 不是该class的一个实例，或者object是null，则返回false。</p>
+<p>3.抽象类：</p>
+<p>（1）语法定义：使用abstract关键字修饰。eg：public abstract void call（）{…};</p>
+<p>（2）作用：限制规定子类必须实现某些方法，但不关注实现细节。</p>
+<p>（3）使用规则：抽象类中可以包含普通的方法，也可以没有抽象方法，且抽象类不能直接创建，可以定义引用变量。</p>
+<p>（4）抽象方法没有方法体以分号结束。eg：public abstract void call();</p>
+<p>练习题：</p>
+<p>现有Shape图形类，用Rectangle矩形和Circle圆形子类，求图形的周长和面积？？？</p>
+<p>参考答案如下：</p>
+<p>[<a href="https://www.imooc.com/qadetail/288666]" target="_blank" rel="noopener">https://www.imooc.com/qadetail/288666]</a>: </p>
+<p>4.接口：</p>
+<p>（1）概念：某一批类所需要遵守的规范，它只规定这些类里必须提供某些方法。</p>
+<p>（2）语法：[修饰符] interface 接口名 [extends 父接口1,父接口2…]</p>
+<p>​                     {</p>
+<p>​                      0-n个常量定义…</p>
+<p>​                      0-n个抽象方法的定义…</p>
+<p>​                     }</p>
+<p>​            接口是用来被继承、被实现的，修饰符一般建议用public，不能使用private和protected修饰。</p>
+<p>  常量：接口属性是常量，即使定义时不加public static final，系统也会自己加上。</p>
+<p>抽象方法：定义时不加public abstract修饰符，系统也会自己加上。</p>
+<p>（3）使用：一个类可以实现一个或多个接口，实现接口用implements关键字，java一个类只能继承一个父类，通过实现多个接口可以做补充。</p>
+<p>—继承父类实现接口的语法为：</p>
+<p>[修饰符] class 类名 extends 父类 implements 接口1，接口2…</p>
+<p>{</p>
+<p>类体部分//若继承了抽象类，需要实现集成的抽象方法；反之要实现接口中的抽象方法。</p>
+<p>}</p>
+<p>注：如果要继承父类，继承父类必须在实现接口之前。 </p>
 
 					
 				</div>
