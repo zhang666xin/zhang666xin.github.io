@@ -58,13 +58,31 @@
 			
 		
 	
-	
-	
           
    <!-- others: such as change-bg, time... -->
-   <p class="page-name-other">
-         10/2/2018 
-            <style type="text/css">
+   <style>
+	.page-name-other {
+		color: #000000;
+		text-align: center;
+		font-size: 20px;
+		line-height: 1.4em;
+		font-family: "KaiTi", "STXingkai", "Source Sans Pro", "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", FontAwesome, sans-serif;
+		margin: 100px 20px 0 20px;
+	}
+
+	.page-name-other p{
+		margin-bottom: 150px;
+	}  
+   </style>
+   
+   <div class="page-name-other">
+		<p>
+			<span>像风吹了八万里，不问归期。</span>
+			<span>记录生活，记录美！   ---Mr.zx</span>
+		</p>
+		<p>
+			10/2/2018  
+			<style type="text/css">
 	header:after {
 		content: '';
 		position: relative;
@@ -104,10 +122,10 @@
 
 <span class="change-header-bg">
 	——&nbsp;<i  class="fa fa-camera-retro" onclick="changeHeaderBg()"></i>	
-</span><br/>
-             <span>像风吹了八万里，不问归期。</span> <br/>
-           <span>记录生活，记录美！   ---Mr.zx</span>
-           </p>	
+</span>
+		</p>	
+		
+    </div>	
 </header>
 
 <!-- nav -->
@@ -257,13 +275,23 @@
 <p>​            接口是用来被继承、被实现的，修饰符一般建议用public，不能使用private和protected修饰。</p>
 <p>  常量：接口属性是常量，即使定义时不加public static final，系统也会自己加上。</p>
 <p>抽象方法：定义时不加public abstract修饰符，系统也会自己加上。</p>
-<p>（3）使用：一个类可以实现一个或多个接口，实现接口用implements关键字，java一个类只能继承一个父类，通过实现多个接口可以做补充。</p>
+<p>（3）使用：一个类可以实现一个或多个接口，实现接口用implements关键字，（右键包-&gt;new-&gt;interface-&gt;起名，一般在名字前加一个I[若还想继承其他父接口，点击add])java一个类只能继承一个父类，通过实现多个接口可以做补充。</p>
 <p>—继承父类实现接口的语法为：</p>
 <p>[修饰符] class 类名 extends 父类 implements 接口1，接口2…</p>
 <p>{</p>
 <p>类体部分//若继承了抽象类，需要实现集成的抽象方法；反之要实现接口中的抽象方法。</p>
 <p>}</p>
-<p>注：如果要继承父类，继承父类必须在实现接口之前。 </p>
+<p>注：如果要继承父类，继承父类必须在实现接口之前。</p>
+<p> （4） 匿名内部类是没有名字的内部类，多用于关注实现而不关注实现类的名称。</p>
+<p>语法格式：Interface i=new Interface(){</p>
+<p>​                                public void method(){</p>
+<p>​                             System.out.println(“………”）}};</p>
+<p>​      i.method();   [调用接口方法]</p>
+<p>或者直接new调用接口方法：  </p>
+<p>​                 new Interface(){</p>
+<p>​                                public void method(){</p>
+<p>​                             System.out.println(“………”）}</p>
+<p>​                                       } .method();</p>
 
 					
 				</div>

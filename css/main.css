@@ -92,6 +92,10 @@ main {
 	margin: 100px 20px 0 20px;
 }
 
+.page-name-other p{
+	margin-bottom: 150px;
+}
+
 @media(max-width:512px) {
 	.page-name,
 	.page-name-other {
