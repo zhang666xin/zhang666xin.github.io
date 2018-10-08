@@ -10,7 +10,7 @@
 		
 
 <head>
-	<title>categories</title>
+	<title>java oj</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="apple-mobile-web-app-title" content="Amaze UI" />
@@ -54,8 +54,8 @@
 		
 		
 			
-			<p class=page-name>分类</p>
-		
+			<p class=page-name>当前文章&nbsp;:&nbsp;《java oj》</p>
+			
 		
 	
           
@@ -170,33 +170,308 @@
 		<!--main-->
 		<main> 
 		<div class="page-container">
-		<!--content start-->
+		<!-- content srart -->
 <div class="am-g am-g-fixed blog-fixed blog-content">
-    <div class="am-u-md-8 am-u-sm-12">
-        <article class="am-article blog-article-p">
+	<div class="am-u-md-8 am-u-sm-12">
 
-            <div class="page-header">
-	<div class="blog-text-center">
-		
-			
-			<i class="fa fa-pencil-square-o">总计2个分类</i>
-			
-		  	 		
-	</div>    	 		
-</div>  	 		
+		<article class="am-article blog-article-p">
 
-            
+			<div class="am-article-hd">
+				
 
-                <div class="category">
-                    <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO博客/">HEXO博客</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a><span class="category-list-count">1</span></li></ul>
-                </div>
 
-            
-        </article>
-    </div>
+				<h1 class="am-article-title blog-text-center">
+					
+					
+	
+		<a href="/2018/10/08/java-oj/" itemprop="url">		
+			java oj		
+		</a>
+	
+
+				</h1>
+
+				<p class="am-article-meta blog-text-center">
+					<span>
+						<i class="fa fa-clock-o"></i> 
+						<a href="/2018/10/08/java-oj/" itemprop="url">
+	<time datetime="2018-10-08T11:30:43.000Z" itemprop="datePublished">
+  		2018-10-08
+  </time>
+</a>    
+&nbsp;
+					</span>
+					
+					<span>						
+						
+							<i class="fa fa-tags"></i>
+							
+								<a href="#java" title="java" rel="1">java</a>&nbsp;
+													 											
+						
+					</span>
+				</p>
+			</div>
+
+			<div class="am-article-bd">
+				<div class="content" id="post-content">
+					
+						<p>1.你的任务是计算a + b。</p>
+<p>输入包含多个测试用例。每个测试用例包含一对整数a和b，每行有一对整数。包含0 0的测试用例将终止输入，此测试用例将不被处理。</p>
+<p>对于每一对输入整数a和b，您应该在一行中输出a和b的和，在输入中每一行输出一行。</p>
+<p>import java.util.Scanner;</p>
+<p>public class Main {</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Scanner reader <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span>System<span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> a<span class="token punctuation">,</span> b<span class="token punctuation">;</span>
+ <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>reader<span class="token punctuation">.</span><span class="token function">hasNext</span><span class="token punctuation">(</span><span class="token string">"0"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        a <span class="token operator">=</span> reader<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        b <span class="token operator">=</span> reader<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>a <span class="token operator">+</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    reader<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>}</p>
+<p><strong>注意：多组输入到0结束—-while (!reader.hasNext(“0”))</strong></p>
+<p>2.A+B for Input-Output Practice</p>
+<p>Time Limit: 1000 ms Memory Limit: 65536 KiB</p>
+<p><a href="http://acm.sdut.edu.cn/onlinejudge2/index.php/Home/Contest/contestsubmit/cid/2575/pid/1017.html" target="_blank" rel="noopener">Submit</a> <a href="http://acm.sdut.edu.cn/onlinejudge2/index.php/Home/Contest/conteststatus/cid/2575/pid/1017.html" target="_blank" rel="noopener">Statistic</a></p>
+<h4 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h4><p>Your task is to calculate the sum of some integers</p>
+<h4 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h4><p>Input contains an integer N in the first line, and then N lines follow. Each line starts with a integer M, and then M integers follow in the same line</p>
+<h4 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h4><p>For each group of input integers you should output their sum in one line, and you must note that there is a blank line between outputs.</p>
+<h4 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h4><pre><code>3
+4 1 2 3 4
+5 1 2 3 4 5
+3 1 2 3
+</code></pre><h4 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h4><pre><code>10
+
+15
+
+6
+</code></pre><p>代码:</p>
+<p>import java.util.Scanner;</p>
+<p>public class Main {</p>
+<pre><code>public static void main(String[] args) {
+    Scanner reader = new Scanner(System.in);
+    int a, b, s;
+    int t = reader.nextInt();
+    while (t&gt;0) {
+        s = 0;
+        a = reader.nextInt();
+        for (int i = 0; i &lt; a; i++) {
+            b = reader.nextInt();
+            s += b;
+        }
+        System.out.printf(&quot;%d\n\n&quot;, s);
+        t--;
+    }
+    reader.close();
+
+}
+</code></pre><p>}</p>
+<p>3.压岁钱</p>
+<p>Time Limit: 1000 ms Memory Limit: 65536 KiB</p>
+<p><a href="http://acm.sdut.edu.cn/onlinejudge2/index.php/Home/Contest/contestsubmit/cid/2575/pid/2555.html" target="_blank" rel="noopener">Submit</a> <a href="http://acm.sdut.edu.cn/onlinejudge2/index.php/Home/Contest/conteststatus/cid/2575/pid/2555.html" target="_blank" rel="noopener">Statistic</a></p>
+<h4 id="Problem-Description-1"><a href="#Problem-Description-1" class="headerlink" title="Problem Description"></a>Problem Description</h4><p>   SuShan过年要给孩子们发压岁钱喽，由于家里孩子很多，这可急坏了SuShan。你肯定以为她在担心钱不够，那你错了，她可是个有钱人儿，不差钱儿。她担心的是每个人分多少从而保证公平。<br>   SuShan从瑞士银行提出1000000来给孩子们分，由于来的孩子的数目不确定，所以SuShan希望你能帮他计算一下每个孩子给多少钱，从而保证每个孩子得到的都是整数。</p>
+<h4 id="Input-1"><a href="#Input-1" class="headerlink" title="Input"></a>Input</h4><p>输入有多组数据，第一行 T 代表数据的组数。<br>接下来有 T 行，每行一个整数 N，代表孩子的数目，1&lt;= N &lt;= 10000000。</p>
+<h4 id="Output-1"><a href="#Output-1" class="headerlink" title="Output"></a>Output</h4><p>只有一行。如果能够分给每个孩子相同数目的压岁钱，且都是整数，则输出每个孩子得到的钱数。否则输出No。</p>
+<h4 id="Sample-Input-1"><a href="#Sample-Input-1" class="headerlink" title="Sample Input"></a>Sample Input</h4><pre><code>3
+1
+2
+3
+</code></pre><h4 id="Sample-Output-1"><a href="#Sample-Output-1" class="headerlink" title="Sample Output"></a>Sample Output</h4><pre><code>1000000
+500000
+No
+</code></pre><p>代码：</p>
+<p>import java.util.Scanner;</p>
+<p>public class Main {<br>    public static void main(String[] args) {<br>        Scanner reader = new Scanner(System.in);<br>        int t=reader.nextInt();<br>        while (t&gt;0) {<br>            int n=reader.nextInt();<br>            if (1000000%n==0) {<br>                System.out.printf(“%d\n”,1000000/n);<br>            }else {<br>                System.out.printf(“No\n”);<br>            }<br>    t–    ；}</p>
+<p>reader.close()；}</p>
+<p>4.蝴蝶效应</p>
+<p>Time Limit: 1000 ms Memory Limit: 65536 KiB</p>
+<p><a href="http://acm.sdut.edu.cn/onlinejudge2/index.php/Home/Contest/contestsubmit/cid/2575/pid/3062.html" target="_blank" rel="noopener">Submit</a> <a href="http://acm.sdut.edu.cn/onlinejudge2/index.php/Home/Contest/conteststatus/cid/2575/pid/3062.html" target="_blank" rel="noopener">Statistic</a></p>
+<h4 id="Problem-Description-2"><a href="#Problem-Description-2" class="headerlink" title="Problem Description"></a>Problem Description</h4><p>蝴蝶效应是气象学家洛伦兹1963年提出来的。其大意为：一只南美洲亚马孙河流域热带雨林中的蝴蝶，偶尔扇动几下翅膀，可能在两周后引起美国德克萨斯引起一场龙卷风。其原因在于：蝴蝶翅膀的运动，导致其身边的空气系统发生变化，并引起微弱气流的产生，而微弱气流的产生又会引起它四周空气或其他系统产生相应的变化，由此引起连锁反应，最终导致其他系统的极大变化。此效应说明，事物发展的结果，对初始条件具有极为敏感的依赖性，初始条件的极小偏差，将会引起结果的极大差异。</p>
+<p>我们将问题简化为方程 f(x) = (a<em>f(max(0,x-b)) + c</em>f(max(0,x-d)))%1000000007。</p>
+<p>现在给出不同的f(0)和n以及参数a,b,c,d,计算出f(n)。</p>
+<h4 id="Input-2"><a href="#Input-2" class="headerlink" title="Input"></a>Input</h4><p>多组输入。</p>
+<p>对于每组数据，有六个个整数n,f0(1 &lt;= n &lt;= 10000，1 &lt;= f0 &lt;= 10000)，a,b,c,d(1 &lt;= a,b,c,d &lt;= 10000)。</p>
+<h4 id="Output-2"><a href="#Output-2" class="headerlink" title="Output"></a>Output</h4><p>对于每组数据输出f(n)。</p>
+<h4 id="Sample-Input-2"><a href="#Sample-Input-2" class="headerlink" title="Sample Input"></a>Sample Input</h4><pre><code>1 2 3 4 5 6
+</code></pre><h4 id="Sample-Output-2"><a href="#Sample-Output-2" class="headerlink" title="Sample Output"></a>Sample Output</h4><pre><code>16
+</code></pre><p>代码：</p>
+<pre><code>import java.util.*;
+
+public class Main {
+
+public static void main(String[] args) {
+    int n, i, a, b, c, d;
+ long[] f=new long[10010];
+    Scanner p = new Scanner(System.in);
+    while (p.hasNext()) {
+        n = p.nextInt();
+        f[0] = p.nextInt();
+        a = p.nextInt();
+        b = p.nextInt();
+        c = p.nextInt();
+        d = p.nextInt();
+        for(i=1;i&lt;=n;i++) {
+            f[i]=(a*f[Math.max(0, i-b)]+c*f[Math.max(0, i-d)])%1000000007;
+        }
+        System.out.println(f[n]);
+        }
+    p.close();
+}}
+</code></pre><p><strong>注意：Math.max（a，b）和定义一维数组格式</strong></p>
+<p>5.判断奇数：if (a % 2 != 0)</p>
+<p>6.</p>
+
+					
+				</div>
+			</div>
+		</article>
+
+		<ul class="am-pagination">
+    
+	
+		<li class="am-pagination-next">
+		<a class="pull-right" href="/2018/10/01/java知识笔记/" title="java知识笔记">
+			下一篇 &raquo;
+		</a>
+		</li>
+	 
+ </ul>
+        
+
+		<div class="theme-annie-comment-button-container">
+	<button id="annie-comment-button" class="theme-annie-comment-button" onclick="Annie_Comment()">
+		加载评论
+		<!--加载评论-->
+	</button>
 </div>
 
+<div id="annie-comment-container" class="theme-annie-comment-main-container">
 
+	
+		
+			<!-- comment gitalk -->
+			<!-- show gitalk comment -->
+
+  <div id="gitalk-container"></div>
+
+
+<!-- gitalk`s css & js -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<link rel="stylesheet" href="/css/comment.css">
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script type="text/javascript">
+	//thanks O-R
+	//https://github.com/gitalk/gitalk/issues/102#issuecomment-382970552
+	//去除尾部匹配正则数组的字符串  
+	//remove redundant characters
+	String.prototype.trimEnd = function(regStr) {
+		var result = this;
+		if(regStr == undefined || regStr == null || regStr == "") {
+			return result;
+		}
+		var array = regStr.split(',');
+
+		if(array.length > 0) {
+
+			var c = array.shift();
+			var str = this;
+			var i = str.length;
+			var rg = new RegExp(c);
+			var matchArr = str.match(rg);
+
+			if(matchArr != undefined && matchArr != null && matchArr.length > 0) {
+				var matchStr = matchArr[0].replace(/\\/g, "\\\\").replace(/\*/g, "\\*")
+					.replace(/\+/g, "\\+").replace(/\|/g, "\\|")
+					.replace(/\{/g, "\\{").replace(/\}/g, "\\}")
+					.replace(/\(/g, "\\(").replace(/\)/g, "\\)")
+					.replace(/\^/g, "\\^").replace(/\$/g, "\\$")
+					.replace(/\[/g, "\\[").replace(/\]/g, "\\]")
+					.replace(/\?/g, "\\?").replace(/\,/g, "\\,")
+					.replace(/\./g, "\\.").replace(/\&/g, "\\&");
+				matchStr = matchStr + '$';
+				result = str.replace(new RegExp(matchStr), "");
+			}
+
+			if(array.length > 0) {
+				return result.trimEnd(array.join())
+			} else {
+				return result;
+			}
+		}
+	};
+
+	//create gitalk
+	var gitalk = new Gitalk({
+		clientID: 'b718a3924c38e43a46fd',
+		clientSecret: 'a90fe88f7fdac55dfa97a7acfff4e73d3ccd7115',
+		//id: window.location.pathname,
+		// id: (window.location.pathname).split("/").pop().substring(0, 49),
+		id: md5(location.href.trimEnd('#.*$,\\?.*$,index.html$')),
+		repo: 'gitalk',
+		owner: 'zhang666xin',
+		admin: 'zhang666xin',
+		distractionFreeMode: 'true',
+	})
+	gitalk.render('gitalk-container');
+</script>
+		
+	
+
+</div>
+
+<script type="text/javascript">
+	/* Show Comment */
+	var Annie_Comment = function() {
+		function Show_Hidden(obj) {
+			obj.style.display = 'block';
+		}
+		
+		//var obutton = $('#annie-comment-button');
+		//var obutton = $('#annie-comment-container');
+		var obutton = document.getElementById("annie-comment-button" || "0");
+		var odiv = document.getElementById("annie-comment-container");
+		if( 'obutton' ) {
+			obutton.onclick = function() {
+				Show_Hidden(odiv);
+				$("#annie-comment-button").css("display", 'none');
+				return false;
+			}
+		}
+	};
+
+	(function Annie_Init() {
+		Annie_Comment();
+	})();
+</script>
+		
+		<!--
+	时间：2018-09-24
+	描述：The TOC module refers to 'https://github.com/codefine/hexo-theme-mellow', include toc.ejs、toc.js、toc.css. All rights reserved by codefine. 
+-->
+
+	
+		<aside class="post-widget">
+			<nav class="post-toc-wrap" id="post-toc">
+				
+					<strong>文章目录</strong>
+				
+				
+				<!--toc(post.content)-->
+				<ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem-Description"><span class="post-toc-text">Problem Description</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Input"><span class="post-toc-text">Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Output"><span class="post-toc-text">Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Input"><span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Output"><span class="post-toc-text">Sample Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem-Description-1"><span class="post-toc-text">Problem Description</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Input-1"><span class="post-toc-text">Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Output-1"><span class="post-toc-text">Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Input-1"><span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Output-1"><span class="post-toc-text">Sample Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem-Description-2"><span class="post-toc-text">Problem Description</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Input-2"><span class="post-toc-text">Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Output-2"><span class="post-toc-text">Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Input-2"><span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Output-2"><span class="post-toc-text">Sample Output</span></a></li></ol>
+			</nav>
+			<div class="post-toc-bar"><div>
+		</aside>
+	
+
+	</div>
+</div>
 		</div>
 		</main>
 		
@@ -268,6 +543,11 @@
 	}
 </style>
 
+
+	<script src="/js/motto.js"></script>
+	<script type="text/javascript">
+		$(".motto").html(getMingYanContent());
+	</script>	
 
 
 
@@ -611,6 +891,8 @@
 	<script type="text/javascript" src="/js/love.js"></script>
 
 
+
+	<script type="text/javascript" src="/js/toc.js"></script>
 
 
 <script type="text/javascript" src="/js/main.js"></script>
