@@ -81,7 +81,7 @@
 			<span>记录生活，记录美！   ---Mr.zx</span>
 		</p>
 		<p>
-			10/10/2018  
+			10/11/2018  
 			<style type="text/css">
 	header:after {
 		content: '';
@@ -637,7 +637,7 @@ public class Main {
             a[i] = p.nextInt();
         }
         for (i = 0; i &lt; n - 1; i++) {
-            for (j = 0; j &lt; n - i - 1; j++) {
+        //冒泡排序    for (j = 0; j &lt; n - i - 1; j++) {
                 if (a[j] &gt; a[j + 1]) {
                     int t = a[j];
                     a[j] = a[j + 1];
@@ -648,6 +648,26 @@ public class Main {
     for (i = 0; i &lt; n-1; i++) 
                 System.out.print(a[i]+&quot; &quot;);
                 System.out.println(a[n-1]);
+        p.close();
+    }
+}
+或者：
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner p = new Scanner(System.in);
+        int n = p.nextInt();
+        int[] a = new int[110];
+        int i;
+        for (i = 0; i &lt; n; i++) {
+            a[i] = p.nextInt();
+        }
+        Arrays.sort(a, 0, n);
+        for (i = 0; i &lt; n-1; i++) 
+                System.out.println(a[i]);
+                System.out.print(a[n-1] + &quot; &quot;);
+        }
         p.close();
     }
 }
