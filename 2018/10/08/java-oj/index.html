@@ -676,6 +676,112 @@ public class Main {
     }
 }
 
+</code></pre><ol start="14">
+<li><p>​                   统计元音</p>
+<h4 id="Problem-Description-11"><a href="#Problem-Description-11" class="headerlink" title="Problem Description"></a>Problem Description</h4><p>统计每个元音字母在字符串中出现的次数。</p>
+<h4 id="Input-10"><a href="#Input-10" class="headerlink" title="Input"></a>Input</h4><p>输入数据首先包括一个整数n，表示测试实例的个数，然后是n行长度不超过100的字符串。</p>
+<h4 id="Output-10"><a href="#Output-10" class="headerlink" title="Output"></a>Output</h4><p>对于每个测试实例输出5行，格式如下：<br>a:num1<br>e:num2<br>i:num3<br>o:num4<br>u:num5<br>多个测试实例之间由一个空行隔开。</p>
+<h4 id="Sample-Input-11"><a href="#Sample-Input-11" class="headerlink" title="Sample Input"></a>Sample Input</h4><pre><code>2
+aeiou
+my name is ignatius
+</code></pre><h4 id="Sample-Output-11"><a href="#Sample-Output-11" class="headerlink" title="Sample Output"></a>Sample Output</h4><pre><code>a:1
+e:1
+i:1
+o:1
+u:1
+
+a:2
+e:1
+i:3
+o:0
+u:1
+</code></pre></li>
+</ol>
+<pre><code>代码：
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner p = new Scanner(System.in);
+        int n = p.nextInt();
+        int a = 0, e = 0, i = 0, o = 0, u = 0, j;
+         p.nextLine();   **//注意的地方**
+        while (n-- &gt; 0) {
+            String str = p.nextLine();
+            for (j = 0; j &lt; str.length(); j++) {
+                if (str.charAt(j) == &#39;a&#39;)
+                    a++;
+                if (str.charAt(j) == &#39;e&#39;)
+                    e++;
+                if (str.charAt(j) == &#39;i&#39;)
+                    i++;
+                if (str.charAt(j) == &#39;o&#39;)
+                    o++;
+                if (str.charAt(j) == &#39;u&#39;)
+                    u++;
+            }
+            System.out.println(&quot;a:&quot; + a);
+            System.out.println(&quot;e:&quot; + e);
+            System.out.println(&quot;i:&quot; + i);
+            System.out.println(&quot;o:&quot; + o);
+            System.out.println(&quot;u:&quot; + u);
+            System.out.println();
+        }
+        p.close();
+    }
+}
+注意：
+
+nextLine()会把nextInt()，next()，nextDouble()，nextFloat()的结束换行符作为字符串读入，进而不需要从键盘输入字符串nextLine便已经转向了下一条语句执行。
+解决办法:
+在每一个nextInt()，next()，nextDouble()，nextFloat()后都加一个nextLine()语句，将被next()去掉的Enter过滤掉。
+</code></pre><ol start="15">
+<li><p>​                       回文串判定</p>
+<h4 id="Problem-Description-12"><a href="#Problem-Description-12" class="headerlink" title="Problem Description"></a>Problem Description</h4><p>输入一串字符（长度小于100），判断该串字符是否是回文串（正序读与逆序读内容相同）。</p>
+<h4 id="Input-11"><a href="#Input-11" class="headerlink" title="Input"></a>Input</h4><p>输入一串字符（长度小于100）。</p>
+<h4 id="Output-11"><a href="#Output-11" class="headerlink" title="Output"></a>Output</h4><p>若该串字符是回文串输出“yes”，否则输出”no“。</p>
+<h4 id="Sample-Input-12"><a href="#Sample-Input-12" class="headerlink" title="Sample Input"></a>Sample Input</h4><pre><code>asdfgfdsa
+</code></pre><h4 id="Sample-Output-12"><a href="#Sample-Output-12" class="headerlink" title="Sample Output"></a>Sample Output</h4><pre><code>yes
+</code></pre></li>
+</ol>
+<pre><code>代码：
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        int i, k = 1;
+        Scanner p = new Scanner(System.in);
+        String m = p.nextLine();
+        for (i = 0; i &lt; m.length() / 2.0; i++) {
+            if (m.charAt(i) != m.charAt(m.length() - i - 1)) {
+                k = 0;
+                break;
+            }
+        }
+        if (k == 0)
+            System.out.println(&quot;no&quot;);
+        else
+            System.out.println(&quot;yes&quot;);
+
+        p.close();
+    }
+}
+或者StringBuilder类reverse方法：实现字符串的反转
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner p = new Scanner(System.in);
+        String m = p.nextLine();
+        StringBuilder n = new StringBuilder(m);
+        n.reverse();
+        String newm = new String(n);
+        if (m.equals(newm))
+            System.out.println(&quot;yes&quot;);
+        else
+            System.out.println(&quot;no&quot;);
+        p.close();
+    }
+}
 </code></pre>
 					
 				</div>
@@ -821,7 +927,7 @@ public class Main {
 				
 				
 				<!--toc(post.content)-->
-				<ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem-Description"><span class="post-toc-text">Problem Description</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Input"><span class="post-toc-text">Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Output"><span class="post-toc-text">Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Input"><span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Output"><span class="post-toc-text">Sample Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem-Description-1"><span class="post-toc-text">Problem Description</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Input-1"><span class="post-toc-text">Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Output-1"><span class="post-toc-text">Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Input-1"><span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Output-1"><span class="post-toc-text">Sample Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem-Description-2"><span class="post-toc-text">Problem Description</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Input-2"><span class="post-toc-text">Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Output-2"><span class="post-toc-text">Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Input-2"><span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Output-2"><span class="post-toc-text">Sample Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem-Description-3"><span class="post-toc-text">Problem Description</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Input-3"><span class="post-toc-text">Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Output-3"><span class="post-toc-text">Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Input-3"><span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Output-3"><span class="post-toc-text">Sample Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Hint"><span class="post-toc-text">Hint</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem-Description-4"><span class="post-toc-text">Problem Description</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Input-4"><span class="post-toc-text">Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Output-4"><span class="post-toc-text">Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Input-4"><span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Output-4"><span class="post-toc-text">Sample Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem-Description-5"><span class="post-toc-text">Problem Description</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Input-5"><span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Output-5"><span class="post-toc-text">Sample Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem-Description-6"><span class="post-toc-text">Problem Description</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Input-5"><span class="post-toc-text">Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Output-5"><span class="post-toc-text">Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Input-6"><span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Output-6"><span class="post-toc-text">Sample Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem-Description-7"><span class="post-toc-text">Problem Description</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Input-6"><span class="post-toc-text">Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Output-6"><span class="post-toc-text">Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Input-7"><span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Output-7"><span class="post-toc-text">Sample Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem-Description-8"><span class="post-toc-text">Problem Description</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Input-7"><span class="post-toc-text">Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Output-7"><span class="post-toc-text">Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Input-8"><span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Output-8"><span class="post-toc-text">Sample Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem-Description-9"><span class="post-toc-text">Problem Description</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Input-8"><span class="post-toc-text">Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Output-8"><span class="post-toc-text">Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Input-9"><span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Output-9"><span class="post-toc-text">Sample Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem-Description-10"><span class="post-toc-text">Problem Description</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Input-9"><span class="post-toc-text">Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Output-9"><span class="post-toc-text">Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Input-10"><span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Output-10"><span class="post-toc-text">Sample Output</span></a></li></ol>
+				<ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem-Description"><span class="post-toc-text">Problem Description</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Input"><span class="post-toc-text">Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Output"><span class="post-toc-text">Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Input"><span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Output"><span class="post-toc-text">Sample Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem-Description-1"><span class="post-toc-text">Problem Description</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Input-1"><span class="post-toc-text">Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Output-1"><span class="post-toc-text">Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Input-1"><span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Output-1"><span class="post-toc-text">Sample Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem-Description-2"><span class="post-toc-text">Problem Description</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Input-2"><span class="post-toc-text">Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Output-2"><span class="post-toc-text">Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Input-2"><span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Output-2"><span class="post-toc-text">Sample Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem-Description-3"><span class="post-toc-text">Problem Description</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Input-3"><span class="post-toc-text">Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Output-3"><span class="post-toc-text">Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Input-3"><span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Output-3"><span class="post-toc-text">Sample Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Hint"><span class="post-toc-text">Hint</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem-Description-4"><span class="post-toc-text">Problem Description</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Input-4"><span class="post-toc-text">Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Output-4"><span class="post-toc-text">Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Input-4"><span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Output-4"><span class="post-toc-text">Sample Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem-Description-5"><span class="post-toc-text">Problem Description</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Input-5"><span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Output-5"><span class="post-toc-text">Sample Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem-Description-6"><span class="post-toc-text">Problem Description</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Input-5"><span class="post-toc-text">Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Output-5"><span class="post-toc-text">Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Input-6"><span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Output-6"><span class="post-toc-text">Sample Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem-Description-7"><span class="post-toc-text">Problem Description</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Input-6"><span class="post-toc-text">Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Output-6"><span class="post-toc-text">Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Input-7"><span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Output-7"><span class="post-toc-text">Sample Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem-Description-8"><span class="post-toc-text">Problem Description</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Input-7"><span class="post-toc-text">Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Output-7"><span class="post-toc-text">Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Input-8"><span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Output-8"><span class="post-toc-text">Sample Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem-Description-9"><span class="post-toc-text">Problem Description</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Input-8"><span class="post-toc-text">Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Output-8"><span class="post-toc-text">Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Input-9"><span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Output-9"><span class="post-toc-text">Sample Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem-Description-10"><span class="post-toc-text">Problem Description</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Input-9"><span class="post-toc-text">Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Output-9"><span class="post-toc-text">Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Input-10"><span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Output-10"><span class="post-toc-text">Sample Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem-Description-11"><span class="post-toc-text">Problem Description</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Input-10"><span class="post-toc-text">Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Output-10"><span class="post-toc-text">Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Input-11"><span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Output-11"><span class="post-toc-text">Sample Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem-Description-12"><span class="post-toc-text">Problem Description</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Input-11"><span class="post-toc-text">Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Output-11"><span class="post-toc-text">Output</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Input-12"><span class="post-toc-text">Sample Input</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sample-Output-12"><span class="post-toc-text">Sample Output</span></a></li></ol>
 			</nav>
 			<div class="post-toc-bar"><div>
 		</aside>
