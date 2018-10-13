@@ -237,7 +237,21 @@
 <p><u>java默认数组从0开始，Arrays.sort（a，1，n）是错误的；</u></p>
 <p><a href="https://blog.csdn.net/qq_37405320/article/details/72466270" target="_blank" rel="noopener">https://blog.csdn.net/qq_37405320/article/details/72466270</a></p>
 <p><a href="https://blog.csdn.net/qq_36880284/article/details/78303512" target="_blank" rel="noopener">https://blog.csdn.net/qq_36880284/article/details/78303512</a></p>
-<p>6.</p>
+<p>6.Java String charAt()方法：此方法返回位于字符串的指定索引处的字符。该字符串的索引从零开始。 此方法定义的语法如下:</p>
+<pre><code>public char charAt(int index)
+</code></pre><p>例子：</p>
+<pre><code>1 public class Test {
+2 
+3    public static void main(String args[]) {
+4       String s = &quot;Strings are immutable&quot;;
+5       char result = s.charAt(8);
+6       System.out.println(result);
+7    }
+8 }
+</code></pre><p>注意：从0开始到第七才是第八个。。。</p>
+<p>这将产生以下结果:</p>
+<pre><code>a
+</code></pre><p>7.</p>
 
 					
 				</div>
