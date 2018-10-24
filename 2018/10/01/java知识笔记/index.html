@@ -81,7 +81,7 @@
 			<span>记录生活，记录美！   ---Mr.zx</span>
 		</p>
 		<p>
-			10/21/2018  
+			10/24/2018  
 			<style type="text/css">
 	header:after {
 		content: '';
@@ -328,7 +328,29 @@
 <p>\b 退格 ，像键盘上的退格键（Backspace）的功能一样。 System.out.print(“abc\b\bdef”);             输出 adef。</p>
 <p>\f 换页符 </p>
 <p><strong>三：异常与异常处理</strong></p>
-<p>1.</p>
+<p>1.异常5个关键字： try catch finally throw throws。。。  </p>
+<p>try           要把有可能出现异常的代码放到try代码块中。</p>
+<p>catch      是捕获和处理异常。</p>
+<p>finall       不管有没有异常都要执行的代码，可加可不加finally。</p>
+<p>throw     在方法中手动抛出异常。</p>
+<p>throws   声明方法有可能抛出的各种异常。</p>
+<p>2.java所有异常类都继承在Throwable类中，该类下包括error（“程序终结者”比如虚拟机坏了）和exception（编码、环境、用户输入出现问题）</p>
+<p>在exception类下又包括RuntimeException(非检查异常)和检查异常（文件异常、SQL异常）。</p>
+<p>在RuntimeException下又包括NullPointerException(空指针异常)、ArrayIndexOutOfBoundsException(数组下标越界异常)、ClassCastException(类型转换异常)、ArithmeticException(算术异常)等。。。</p>
+<p>3.try-catch 代码块三种情况：</p>
+<pre><code>try{
+
+}catch{
+
+}
+
+</code></pre><p>a.无异常。则执行完try后不执行catch</p>
+<p>b.有异常，被捕获。执行完try后在执行catch</p>
+<p>c.有异常，未捕获。程序中断运行。</p>
+<p>使用多重catch语句时，注意顺序。异常子类一定要位于异常父类（exception）之前，因为系统会按照就近原则，先子类后父类。</p>
+<p>4.throw 异常<img src="D:\java\exercise\IMG_20181024_091254.jpg" alt=""></p>
+<p>5.throws异常: 用throws 必须要用try-catch ，否则会报错。。。</p>
+<p><img src="D:\java\exercise\IMG_20181024_092803.jpg" alt=""></p>
 
 					
 				</div>
