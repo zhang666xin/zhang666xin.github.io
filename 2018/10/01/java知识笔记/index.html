@@ -81,7 +81,7 @@
 			<span>记录生活，记录美！   ---Mr.zx</span>
 		</p>
 		<p>
-			11/10/2018  
+			11/11/2018  
 			<style type="text/css">
 	header:after {
 		content: '';
@@ -377,7 +377,82 @@
 <p>\1. 字符串 str 中字符的索引从0开始，范围为 0 到 str.length()-1</p>
 <p>\2. 使用 indexOf 进行字符或字符串查找时，如果匹配返回位置索引；如果没有匹配结果，返回 -1</p>
 <p>\3. 使用 substring(beginIndex , endIndex) 进行字符串截取时，包括 beginIndex 位置的字符，不包括 endIndex 位置的字符</p>
-<p>4.</p>
+<ol start="4">
+<li>==: 判断两个字符串在内存中首地址是否相同，即判断是否是同一个字符串对象</li>
+</ol>
+<p>equals(): 比较存储在两个字符串对象中的内容是否一致</p>
+<ol start="5">
+<li><p>StringBuilder类：</p>
+<p>1）String 类具有是不可变性，改变内容会额外创建一个临时对象。如果需要创建一个内容可变的字符串对象，使用 StringBuilder 或 StringBuffer 都可以，StringBuffer 是线程安全的，而 StringBuilder 则没有实现线程安全功能，所以性能略高 。一般用StringBuilder。</p>
+<p>2）常用方法：<img src="D:\java\exercise\53a7d34300011c6005970125.jpg" alt=""></p>
+</li>
+</ol>
+<p>应用： <img src="D:\java\exercise\53a7d36c0001e3cd06760242.jpg" alt=""></p>
+<p>运行结果如下：<img src="D:\java\exercise\53a7d3ab0001ff3803060080.jpg" alt=""></p>
+<p>任务：<a href="https://www.imooc.com/code/2208" target="_blank" rel="noopener">https://www.imooc.com/code/2208</a></p>
+<p><strong>五 常用类</strong></p>
+<ol>
+<li><p>包装类：基本数据类型是不具备对象的特性的 ，如int、double等不能调用对象，若想让基本数据类型具有对象的特性，java提供了包装类。</p>
+<p><img src="D:\java\exercise\53abd8450001911703630223.jpg" alt=""></p>
+<p>包装类主要提供了两大类方法：</p>
+<p>\1. 将本类型和其他基本类型进行转换的方法</p>
+<p>\2. 将字符串和本类型及包装类互相转换的方法</p>
+<p>如Integer包装类特性：</p>
+<p>构造方法为：<img src="D:\java\exercise\53abde780001144905740055.jpg" alt=""></p>
+<p>如：<img src="D:\java\exercise\53abde960001462b06480072.jpg" alt=""></p>
+<p>常用方法：</p>
+<p><img src="D:\java\exercise\53abdee00001542805680224.jpg" alt=""></p>
+<p>2.基本类型和包装类之间的转换（以Integer为例）：</p>
+<p><strong>装箱：</strong>把基本类型转换成包装类，使其具有对象的性质，又可分为手动装箱和自动装箱 </p>
+</li>
+</ol>
+<p>   <img src="D:\java\exercise\53abe4590001373504390074.jpg" alt=""></p>
+<p>   <strong>拆箱：</strong>和装箱相反，把包装类对象转换成基本类型的值，又可分为手动拆箱和自动拆箱 </p>
+<p>   <img src="D:\java\exercise\53abe5210001652606630071.jpg" alt=""></p>
+<ol start="3">
+<li><p>基本类型和字符串之间的转换：</p>
+<p>基本类型转换为字符串有三种方法：</p>
+<p>\1. 使用包装类的 toString() 方法</p>
+<p>\2. 使用String类的 valueOf() 方法</p>
+<p>\3. 用一个空字符串加上基本类型，得到的就是基本类型数据对应的字符串</p>
+<p><img src="D:\java\exercise\53abea61000151e105120118.jpg" alt=""></p>
+<p>将字符串转换成基本类型有两种方法：</p>
+<p>\1. 调用包装类的 parseXxx 静态方法</p>
+<p>\2. 调用包装类的 valueOf() 方法转换为基本类型的包装类，会自动拆箱</p>
+<p><img src="D:\java\exercise\53abeaad000109af04610098.jpg" alt=""></p>
+<p>ps：其他基本类型与字符串的相互转化方法都类似 。</p>
+<p>单选题：</p>
+<p>下列关于基本类型包装类的叙述中错误的是（ ） </p>
+<p>a  基本类型也可调用方法 </p>
+<p>b  包装类都在 java.lang 包中  </p>
+<p>c  包装类提供了在不同类型间进行转换的方法 </p>
+<p>​                                                                                                  ——-a</p>
+<p>解析：基本类型是不能调用方法的，而其包装类具有很多方法，所以选项 a 的说法不正确 。</p>
+<ol start="4">
+<li><p>使用 Date 和 SimpleDateFormat 类表示时间：</p>
+<p>1）java.util 包中的 Date 类，这个类最主要的作用就是获取当前时间 。</p>
+<p><img src="D:\java\exercise\53b2125e0001429505470051.jpg" alt=""></p>
+<p>运行结果：<img src="D:\java\exercise\53b21db0000143ed03720025.jpg" alt=""></p>
+<p>其中，Wed 代表 Wednesday (星期三)， Jun 代表 June (六月)， 11 代表 11 号， CST 代表 China Standard Time (中国标准时间，也就是北京时间，东八区)。 </p>
+<p>2）java.text 包中的 SimpleDateFormat 类，可以用来对日期时间进行格式化，如可以将日期转换为指定格式的文本，也可将文本转换为日期。 </p>
+<p>​        a）使用 format() 方法将日期转换为指定格式的文本 </p>
+<p><img src="D:\java\exercise\53b22d780001e5f808060193.jpg" alt=""></p>
+<p>其中，代码中的 “yyyy-MM-dd HH:mm:ss” 为预定义字符串， yyyy 表示四位年， MM 表示两位月份， dd 表示两位日期， HH 表示小时(使用24小时制)， mm 表示分钟， ss 表示秒，这样就指定了转换的目标格式，最后调用 <strong>format()</strong> 方法将时间转换为指定的格式的字符串。</p>
+<p>​        b）使用 parse() 方法将文本转换为日期 </p>
+<p><img src="D:\java\exercise\53b22ddf00012edf08100192.jpg" alt=""></p>
+<p>其中，代码中的 “yyyy年MM月dd日 HH:mm:ss” 指定了字符串的日期格式，调用 <strong>parse()</strong> 方法将文本转换为日期。 </p>
+<p>注意：</p>
+<p>（1）、 调用 SimpleDateFormat 对象的 parse() 方法时可能会出现转换异常，即 ParseException ，因此需要进行异常处理</p>
+<p>（2）、 使用 Date 类时需要导入 java.util 包，使用 SimpleDateFormat 时需要导入 java.text 包。</p>
+<p>3）java.util.Calendar 类是一个抽象类，可以通过调用 getInstance() 静态方法获取一个 Calendar 对象，此对象已由当前日期时间初始化，即默认代表当前时间，如 Calendar c = Calendar.getInstance(); </p>
+<p><img src="D:\java\exercise\53b23219000153b608030239.jpg" alt=""></p>
+<p>其中，调用 Calendar 类的 getInstance() 方法获取一个实例，然后通过调用 get() 方法获取日期时间信息，参数为需要获得的字段的值， Calendar.Year 等为 Calendar 类中定义的静态常量。 </p>
+<p>Calendar 类提供了 getTime() 方法，用来获取 Date 对象，完成 Calendar 和 Date 的转换，还可通过 getTimeInMillis() 方法，获取此 Calendar 的时间值，以毫秒为单位。如下所示： </p>
+<p><img src="D:\java\exercise\53b232b200015b8306120095.jpg" alt=""></p>
+</li>
+</ol>
+</li>
+</ol>
 <p><strong>五输入输出</strong></p>
 <ol>
 <li><p>概述：java将输入输出问题抽象化为流对象来解决。。。</p>
